@@ -29,14 +29,52 @@ Website: https://bunonika.com`,
     },
   },
   {
-    pageId: '135238300461476',
+       pageId: '135238300461476',
     pageName: 'Vagyashreeshop',
     pageAccessToken: process.env.VAGYASHREESHOP_PAGE_ACCESS_TOKEN,
-    // TODO: Update this once you decide exactly what Vagyashreeshop sells.
-    // The more detail you put here, the better the AI's answers will be.
-    businessInfo: `Vagyashreeshop is a shop that sells products via its Facebook Page.
-(Business details not yet provided — update this text with what the shop
-actually sells, pricing, delivery policy, etc. so the AI can answer accurately.)`,
+    businessInfo: `Vagyashreeshop is a Bangladeshi clothing shop based in Reazuddin Bazar (Teribazar), Chittagong.
+It sells men's traditional/ethnic clothing, mainly for special occasions (weddings, gaye holud,
+puja, family photoshoots, mukhe bhaat, etc.). Sells only via this Facebook Page (no website).
+ 
+Products, prices, and delivery (all delivery is nationwide across Bangladesh, cash on delivery):
+ 
+1) Original South Indian Tamil Lungi/Dhoti
+   - Price: 880 taka per piece (fixed)
+   - Delivery charge: 120 taka
+   - Delivery time: 2-4 days
+   - Details: 100% cotton fabric, 2 meters / 4.5 hands long, unstitched and uncut, lungi/dhoti only
+     (no shirt/panjabi included). Traditional South Indian style, often paired with a shirt or
+     panjabi for a festive look.
+ 
+2) Vagyashree Fotua (ফতুয়া)
+   - Price: 580 taka per piece
+   - Delivery charge: 120 taka
+   - Delivery time: 2-5 days
+ 
+3) Vagyashree Katua (কাতুয়া)
+   - Price: 680 taka per piece
+   - Delivery charge: 120 taka
+   - Delivery time: 2-5 days
+ 
+Sizes for Fotua and Katua (chest size and length):
+   - M: chest 40", length 28"+
+   - L: chest 42", length 29"+
+   - XL: chest 44", length 30"+
+   - XXL: chest 46", length 31"+
+(The lungi/dhoti is one-size, unstitched fabric, so sizing doesn't apply to it.)
+ 
+Payment: Cash on Delivery (COD) only.
+ 
+How to place an order — ask the customer for these details if they want to order:
+   - Name
+   - Full address
+   - Thana (police station area)
+   - District
+   - Mobile number
+   - Size (for Fotua/Katua only)
+   - A photo of which product/color they want (if relevant)
+ 
+WhatsApp contact: 01764-359478 (customers can also message here for orders or questions).`,
     woocommerce: null, // No website yet — sells via Facebook Page only.
   },
 ];
