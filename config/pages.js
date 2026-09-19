@@ -25,7 +25,7 @@ Products: men's cotton shirts (half sleeve, full sleeve, oxford), hoodies, saree
 100% premium cotton fabric, made in Bunonika's own factory (for manufactured items); other items
 are authentic sourced men's export-collection pieces.
 
-Address: 31/7, Gulfam Tower (Ground Floor), Teribazar Main Road, Chittagong.
+Address: 31/7, Gulfam Tower (Ground Floor), Teribazar Main Road, Chittagong. ৩১/৭, গুলফাম টাওয়ার (নিচ তলা), জারা শপের নিচে, টেরিবাজার মেইন রোড, চট্টগ্রাম।
 Shop hours: Open every day from 10:00 AM to 10:00 PM.
 
 Pricing:
