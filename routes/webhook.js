@@ -37,14 +37,19 @@ router.post('/', async (req, res) => {
   res.status(200).send('EVENT_RECEIVED');
 
   const body = req.body;
-  if (body.object !== 'page') return;
+  // 'page' = Messenger (Facebook Page). 'instagram' = Instagram Direct.
+  // Both use this same webhook shape, just a different top-level object type.
+  if (body.object !== 'page' && body.object !== 'instagram') return;
 
   for (const entry of body.entry || []) {
-    const pageId = entry.id;
-    const pageConfig = pages.find((p) => p.pageId === pageId);
+    const entryId = entry.id;
+    const pageConfig =
+      body.object === 'page'
+        ? pages.find((p) => p.pageId === entryId)
+        : pages.find((p) => p.instagramId === entryId);
 
     if (!pageConfig) {
-      console.log(`Message for unconfigured page ${pageId} — ignoring.`);
+      console.log(`Message for unconfigured ${body.object} account ${entryId} — ignoring.`);
       continue;
     }
 

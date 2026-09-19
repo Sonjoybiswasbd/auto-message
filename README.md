@@ -65,6 +65,47 @@ stock from bunonika.com.
 Check the app's logs in Hostinger's Node.js panel if something doesn't reply —
 errors are printed there.
 
+## 6. Adding Instagram (optional)
+
+1. Make sure the Instagram account is a **Professional/Business** account and
+   is linked to the Bunonika (or Vagyashreeshop) Facebook Page, under the
+   Page's Settings > Linked Accounts.
+2. In Meta App > your Messenger use case > Instagram, follow the prompts to
+   connect the same Page — this reuses the same Page Access Token you
+   already generated, as long as it includes Instagram permissions.
+3. Find the Instagram Business Account ID: in Graph API Explorer, run
+   `GET /{page-id}?fields=instagram_business_account` (use the same Page
+   Access Token). Copy the returned ID.
+4. Add it as `BUNONIKA_INSTAGRAM_ID` (or `VAGYASHREESHOP_INSTAGRAM_ID`) in
+   Hostinger's Environment Variables, then redeploy/restart.
+5. In the Meta App's Webhooks section, subscribe to Instagram's `messages`
+   field the same way you did for Messenger.
+
+No code changes needed — the same webhook URL (`/webhook`) handles both.
+
+## 7. Adding WhatsApp (optional, more setup involved)
+
+1. In Meta App, add the **WhatsApp** use case (Customize it, like you did
+   for Messenger).
+2. Under WhatsApp > API Setup, Meta gives you a **free test phone number**
+   to start with (you can add your own real business number later).
+3. Copy the **Phone Number ID** shown there.
+4. Generate a permanent access token: WhatsApp > API Setup > System Users
+   (or use the temporary token to test first).
+5. Add `BUNONIKA_WHATSAPP_PHONE_ID` and `BUNONIKA_WHATSAPP_ACCESS_TOKEN` in
+   Hostinger's Environment Variables, then redeploy/restart.
+6. In Meta App > WhatsApp > Configuration, set the webhook:
+   - Callback URL: `https://ai.iamecomexpert.com/webhook/whatsapp`
+   - Verify Token: the same `META_VERIFY_TOKEN` you already used.
+   - Subscribe to the `messages` field.
+7. Test by sending a WhatsApp message to the test number from your own phone.
+
+**Important WhatsApp-specific rule:** you can only send free-form text
+replies within 24 hours of the customer's last message. Outside that
+window, WhatsApp requires a pre-approved message Template instead — this
+bot does not yet handle that case (it will just fail silently and log an
+error), since it needs to be designed for your specific use case later.
+
 ## Notes / limitations of this Phase 1 version
 
 - Conversation memory is in-server-memory only — it resets if the app
